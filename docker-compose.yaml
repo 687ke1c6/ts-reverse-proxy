@@ -4,7 +4,7 @@ services:
     image: tailscale/tailscale:latest
     hostname: tailscale-hap
     environment:
-      - TS_AUTHKEY=tskey-auth-k8B9VKyzge11CNTRL-tXdz7qVT6vQuZrAsUkr9uQb6NW5VUGkpQ
+      - TS_AUTHKEY=${TS_AUTHKEY}
       - TS_EXTRA_ARGS=--advertise-tags=tag:container
       - TS_STATE_DIR=/var/lib/tailscale
       - TS_USERSPACE=false
